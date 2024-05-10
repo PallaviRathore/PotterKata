@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PotterKata.Solution
+namespace PotterKata.src.Model
 {
     internal class DiscountCatalog
     {

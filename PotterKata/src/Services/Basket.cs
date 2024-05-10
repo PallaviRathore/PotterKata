@@ -4,18 +4,23 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PotterKata.src.Model;
 
-namespace PotterKata.Solution
+namespace PotterKata.src.Services
 {
+    /// <summary    
+    ///  // This class represents a basket of book sets.
+    /// </summary>
     internal class Basket
     {
+        //List that holds book set in the basket.
         private readonly List<BookSet> bookSets = new List<BookSet>();
 
         public Basket(params int[] books)
         {
             InitializeBasket(books);
         }
-        
+
         /// <summary>
         /// Sort the basket as per the books selected.
         /// </summary>
@@ -30,7 +35,7 @@ namespace PotterKata.Solution
                 AddToExistingSetOrCreateNewSet(b);
         }
 
-       
+
         /// <summary>
         /// This method is where we get the set of books or create new.
         /// </summary>
@@ -46,6 +51,8 @@ namespace PotterKata.Solution
                 bookSets.Add(new BookSet(book));
 
         }
+
+        // this calculates and returns the total price of the book sets in the basket.
         public decimal BasketTotal => CalculateTotal();
 
         private decimal CalculateTotal()
@@ -65,6 +72,7 @@ namespace PotterKata.Solution
             return TotalWith(bookSets) - set.Total + set.TotalWith(book);
         }
 
+        //Sum of the set passed.
         private decimal TotalWith(IEnumerable<BookSet> sets)
         {
             return sets.Sum(s => s.Total);

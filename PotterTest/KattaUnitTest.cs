@@ -1,8 +1,8 @@
-using PotterKata.Solution;
+using PotterKata.src.Services;
 
 namespace PotterTest
 {
-   
+
     public class KattaUnitTest 
     {
 
