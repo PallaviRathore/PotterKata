@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace PotterKata.Solution
 {
-    
+    /// <summary>
+    /// This class is the book set.
+    /// </summary>
     internal class BookSet
     {
         private readonly List<int> books = new List<int>();

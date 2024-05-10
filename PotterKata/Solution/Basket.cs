@@ -15,7 +15,11 @@ namespace PotterKata.Solution
         {
             InitializeBasket(books);
         }
-
+        
+        /// <summary>
+        /// Sort the basket as per the books selected.
+        /// </summary>
+        /// <param name="books"></param>
         public void InitializeBasket(params int[] books)
         {
             var sortedByOccurrence = books.GroupBy(b => b)
